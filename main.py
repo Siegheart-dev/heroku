@@ -9,7 +9,7 @@ main_menu = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
 button_book = types.KeyboardButton(text="Записаться на мойку")
 button_price = types.KeyboardButton(text="Прайс-лист ваших услуг")
 main_menu.add(button_book,button_price)
-
+bot.delete_webhook()
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
